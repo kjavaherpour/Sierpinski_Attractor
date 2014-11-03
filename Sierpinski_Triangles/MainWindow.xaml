@@ -12,7 +12,8 @@
 			<ComboBoxItem x:Name="RedShapeItem" Content="Red" HorizontalAlignment="Left" Width="118" IsSelected="True"/>
 			<ComboBoxItem x:Name="BlueShapeItem" Content="Blue" HorizontalAlignment="Left" Width="118"/>
 			<ComboBoxItem x:Name="GreenShapeItem" Content="Green" HorizontalAlignment="Left" Width="118"/>
-			<ComboBoxItem x:Name="YellowShapeItem" Content="Yellow" HorizontalAlignment="Left" Width="118"/>
+			<ComboBoxItem x:Name="OrangeShapeItem" Content="Orange" HorizontalAlignment="Left" Width="118"/>
+			<ComboBoxItem x:Name="CyanShapeItem" Content="Cyan" HorizontalAlignment="Left" Width="118"/>
 		</ComboBox>
 		<RadioButton x:Name="ShapeSizeTwo" Content="2" Margin="225,488,-159.87,-402.04" IsChecked="True" ToolTip="Selects the size of the shapes created by the new control point"/>
 		<RadioButton x:Name="ShapeSizeFour" Content="4" Margin="264.87,488,-201.74,-402.04" ToolTip="Selects the size of the shapes created by the new control point"/>

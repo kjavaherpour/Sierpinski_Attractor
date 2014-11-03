@@ -69,12 +69,15 @@ namespace Sierpinski_Triangles
                 {
                     rect.Fill = Brushes.Blue;
                 }
-                if (ComboBox.GetIsSelected(YellowShapeItem))
+                if (ComboBox.GetIsSelected(OrangeShapeItem))
                 {
-                    rect.Fill = Brushes.Yellow;
+                    rect.Fill = Brushes.Orange;
                 }
-
-                //Get the position from the event firing it, relative to (on) the canvas
+                if (ComboBox.GetIsSelected(CyanShapeItem))
+                {
+                    rect.Fill = Brushes.Cyan;
+                }
+                //Get the position from the event firing it, relative to the canvas
                 Canvas.SetLeft(rect, e.GetPosition(ShapeCanvas).X);
                 Canvas.SetTop(rect, e.GetPosition(ShapeCanvas).Y);
                 ShapeCanvas.Children.Add(rect); //put it on the canvas
