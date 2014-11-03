@@ -11,3 +11,5 @@ C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\De
 C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski_Triangles.csproj.GenerateResource.Cache
 C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski_Triangles.exe
 C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski_Triangles.pdb
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Simple Styles.baml
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\App.baml
