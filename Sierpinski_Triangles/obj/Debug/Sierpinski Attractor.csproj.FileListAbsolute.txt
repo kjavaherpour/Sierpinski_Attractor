@@ -1,0 +1,15 @@
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\bin\Debug\Sierpinski_Triangles.exe.config
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\bin\Debug\Sierpinski_Triangles.exe
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\bin\Debug\Sierpinski_Triangles.pdb
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski Attractor.csprojResolveAssemblyReference.cache
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\MainWindow.baml
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Simple Styles.baml
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\App.baml
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\MainWindow.g.cs
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\App.g.cs
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski_Triangles_MarkupCompile.cache
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski_Triangles.g.resources
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski_Triangles.Properties.Resources.resources
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski Attractor.csproj.GenerateResource.Cache
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski_Triangles.exe
+C:\Users\Ricky\Documents\GitHub\Sierpinski_Triangles\Sierpinski_Triangles\obj\Debug\Sierpinski_Triangles.pdb
