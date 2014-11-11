@@ -179,7 +179,7 @@ namespace Sierpinski_Triangles
         //Dialog from pressing "About" menu item
         private void About_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            MessageBox.Show("Authors:\nRicky Sidhu (rajwinder.sidhu.842@my.csun.edu) \nKamron Javaherpour (PUTYOUREMAILHERE@BABY.COM)");
+            MessageBox.Show("Authors:\nRicky Sidhu (rajwinder.sidhu.842@my.csun.edu) \nKamron Javaherpour (kamron.javaherpour.623@my.csun.edu)");
         }
 
         //Dialog from pressing "Usage" menu item
