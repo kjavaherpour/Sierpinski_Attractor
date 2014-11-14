@@ -22,6 +22,7 @@ namespace Sierpinski_Triangles
         int controlPoints = -1;
         Boolean shapeDraggable = false;
         Rectangle shapeDragged;
+        Boolean drawn = false;
         public MainWindow()
         {            
             InitializeComponent();            
@@ -90,17 +91,17 @@ namespace Sierpinski_Triangles
         private void ClearButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             ShapeCanvas.Children.Clear();
+            drawn = false;
             controlPoints = -1;
         }
 
-        //Render the attractor
-        private void RunButton_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
+        private void drawAttractor(){
+            drawn = true;
             if (controlPoints < 2)
             {
                 if (controlPoints < 0)
                     MessageBox.Show("Add at least 3 control points.");
-                else 
+                else
                     MessageBox.Show("Add at least " + (2 - controlPoints).ToString() + " control points.");
             }
             else //We've got enough control points to work with.
@@ -127,6 +128,11 @@ namespace Sierpinski_Triangles
                     last = l;
                 }
             }
+        }
+        //Render the attractor
+        private void RunButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            drawAttractor();
         }
 
         //If mousedown is being held, drag the shape we're holding
@@ -174,6 +180,24 @@ namespace Sierpinski_Triangles
         private void ShapeCanvas_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             shapeDraggable = false;
+            List<Rectangle> removed = new List<Rectangle>();
+            if (drawn)
+            {
+                foreach (Rectangle rekt in ShapeCanvas.Children)
+                {
+                    if (!cp.Contains(rekt))
+                    {
+                        removed.Add(rekt);
+                    }
+
+                }
+                foreach (Rectangle rekt in removed)
+                {
+                    ShapeCanvas.Children.Remove(rekt);
+                }                
+                drawAttractor();
+            }            
+
         }
 
         //Dialog from pressing "About" menu item
