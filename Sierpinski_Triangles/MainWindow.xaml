@@ -8,7 +8,7 @@
 		<Label Content="New Shape Size" Margin="369,445,-362.87,-370.96"/>
 		<Button x:Name="RunButton" Content="Run" IsDefault="True" Click="RunButton_Click" Margin="518.782,463,-519.733,-401.96" ToolTip="Run the algorithm"/>
 		<Button x:Name="ClearButton" Content="Clear" Click="ClearButton_Click" Margin="635.049,463,-636,-401.96" ToolTip="Clear the canvas"/>
-		<ComboBox Margin="18,487,-38,-408.96" ToolTip="Select the color of the new control point">
+		<ComboBox x:Name="CBox" Margin="18,487,-38,-408.96" ToolTip="Select the color of the new control point">
 			<ComboBoxItem x:Name="RedShapeItem" Content="Red" HorizontalAlignment="Left" Width="118" Selected="RedShapeItem_Selected"/>
 			<ComboBoxItem x:Name="BlueShapeItem" Content="Blue" HorizontalAlignment="Left" Width="118" Selected="BlueShapeItem_Selected"/>
 			<ComboBoxItem x:Name="GreenShapeItem" Content="Green" HorizontalAlignment="Left" Width="118" Selected="GreenShapeItem_Selected"/>
@@ -22,10 +22,10 @@
 			<MenuItem Header="Usage" Height="23" VerticalAlignment="Bottom" Click="Usage_Click"/>
 			<MenuItem Header="About" Height="23" VerticalAlignment="Top" Click="About_Click"/>
 		</Menu>
-		<Label Content="Shape Color (RGB)" HorizontalAlignment="Left" Height="25.96" Margin="159,437,-173,-362.96" VerticalAlignment="Top" Width="114"/>
-		<Slider x:Name="RedValueSlider" HorizontalAlignment="Left" Height="20" Margin="164,465,-164,-385" VerticalAlignment="Top" Width="100" Maximum="255" Value="255"/>
-		<Slider x:Name="GreenValueSlider" HorizontalAlignment="Left" Height="20" Margin="164,488,-164,-408" VerticalAlignment="Top" Width="100" Maximum="255" Value="255"/>
-		<Slider x:Name="BlueValueSlider" HorizontalAlignment="Left" Height="20" Margin="164,513,-164,-433" VerticalAlignment="Top" Width="100" Maximum="255" Value="255"/>
-		<Canvas x:Name="ColorPreviewCanvas" HorizontalAlignment="Left" Height="53.96" Margin="281,468,-232,-421.96" VerticalAlignment="Top" Width="51" Background="Black"/>
+		<Label Content="Shape Color (RGB)" HorizontalAlignment="Left" Height="25.96" Margin="163.756,432.244,-177.756,-358.204" VerticalAlignment="Top" Width="114"/>
+		<Slider x:Name="RedValueSlider" HorizontalAlignment="Left" Height="20" Margin="168.756,460.244,-168.756,-380.244" VerticalAlignment="Top" Width="100" Maximum="255" Value="255" ValueChanged="ColorValueChanged"/>
+        <Slider x:Name="GreenValueSlider" HorizontalAlignment="Left" Height="20" Margin="168.756,483.244,-168.756,-403.244" VerticalAlignment="Top" Width="100" Maximum="255" Value="255" ValueChanged="ColorValueChanged"/>
+        <Slider x:Name="BlueValueSlider" HorizontalAlignment="Left" Height="20" Margin="168.756,508.244,-168.756,-428.244" VerticalAlignment="Top" Width="100" Maximum="255" Value="255" ValueChanged="ColorValueChanged"/>
+		<Canvas x:Name="ColorPreviewCanvas" HorizontalAlignment="Left" Height="53.96" Margin="285.756,463.244,-236.756,-417.204" VerticalAlignment="Top" Width="51" Background="White"/>
 	</Grid>
 </Window>

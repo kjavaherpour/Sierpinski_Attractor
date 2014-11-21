@@ -60,10 +60,12 @@ namespace Sierpinski_Triangles
                 //Get the selected ComboBox item for shape color (doesn't need to be an else if, only one of these can be selected anyway :^) )
 				
 				//TODO: this is currently error-prone.
-                //int red = int.Parse(RedValue.GetValue());
-
-                
-				//rect.Fill = new SolidColorBrush(Color.FromRgb());
+                if (ColorPreviewCanvas != null)
+                {
+                    SolidColorBrush shapeColor = (SolidColorBrush)ColorPreviewCanvas.Background;
+                    rect.Fill = shapeColor;
+                }
+                else rect.Fill = Brushes.White;				
 				
                 //Get the position from the event firing it, relative to the canvas
                 Canvas.SetLeft(rect, e.GetPosition(ShapeCanvas).X);
@@ -205,29 +207,52 @@ namespace Sierpinski_Triangles
 		
 		//All of these will set the RGB triplet to some preset.
         private void RedShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
-        {
-        	// TODO: Add event handler implementation here.
+        {        	
+            RedValueSlider.Value = 255;
+            GreenValueSlider.Value = 0;
+            BlueValueSlider.Value = 0;
         }
 
         private void BlueShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            RedValueSlider.Value = 0;
+            GreenValueSlider.Value = 0;
+            BlueValueSlider.Value = 255;
         }
 
         private void GreenShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            RedValueSlider.Value = 0;
+            GreenValueSlider.Value = 255;
+            BlueValueSlider.Value = 0;
         }
 
         private void OrangeShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            RedValueSlider.Value = 255;
+            GreenValueSlider.Value = 255;
+            BlueValueSlider.Value = 0;
         }
 
         private void CyanShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            RedValueSlider.Value = 0;
+            GreenValueSlider.Value = 255;
+            BlueValueSlider.Value = 255;
         }
 
+        //For slider value changes
+        private void ColorValueChanged(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
+        {
+            double r = 255, g = 255, b = 255;
+            if(RedValueSlider != null)
+                r = RedValueSlider.Value;
+            if(GreenValueSlider != null)
+                g = GreenValueSlider.Value;
+            if (BlueValueSlider != null)
+                b = BlueValueSlider.Value;
+            if(ColorPreviewCanvas != null)
+                ColorPreviewCanvas.Background = new SolidColorBrush(Color.FromRgb((byte)r, (byte)g, (byte)b));
+        }
     }
 }
