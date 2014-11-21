@@ -4,23 +4,28 @@
         Title="Sierpinski Attractor" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Width="768" Height="576" Background="#FFF3F3F3">
     <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100">
 		<Canvas x:Name="ShapeCanvas" HorizontalAlignment="Left" Height="400.5" VerticalAlignment="Top" Width="762" Background="White" MouseRightButtonUp="ShapeCanvas_MouseRightButtonUp" MouseLeftButtonDown="ShapeCanvas_MouseLeftButtonDown" MouseLeftButtonUp="ShapeCanvas_MouseLeftButtonUp" MouseMove="ShapeCanvas_MouseMove" Margin="0,23,-662,-323.5" Cursor="Arrow"/>
-		<Label Content="Shape Color&#xA;" Margin="56,450,-30.457,-391.92"/>
-		<Label Content="New Shape Size" Margin="230,450,-223.87,-375.96"/>
-		<Button x:Name="RunButton" Content="Run" IsDefault="True" Click="RunButton_Click" Margin="390,458.97,-435,-414.93" ToolTip="Run the algorithm"/>
-		<Button x:Name="ClearButton" Content="Clear" Click="ClearButton_Click" Margin="557,458.97,-602,-414.93" ToolTip="Clear the canvas"/>
-		<ComboBox Margin="56,484,-76,-405.96" ToolTip="Select the color of the new control point">
-			<ComboBoxItem x:Name="RedShapeItem" Content="Red" HorizontalAlignment="Left" Width="118" IsSelected="True"/>
-			<ComboBoxItem x:Name="BlueShapeItem" Content="Blue" HorizontalAlignment="Left" Width="118"/>
-			<ComboBoxItem x:Name="GreenShapeItem" Content="Green" HorizontalAlignment="Left" Width="118"/>
-			<ComboBoxItem x:Name="OrangeShapeItem" Content="Orange" HorizontalAlignment="Left" Width="118"/>
-			<ComboBoxItem x:Name="CyanShapeItem" Content="Cyan" HorizontalAlignment="Left" Width="118"/>
+		<Label Content="Preset Shape Colors&#xA;" Margin="18,451,-38,-392.92"/>
+		<Label Content="New Shape Size" Margin="369,445,-362.87,-370.96"/>
+		<Button x:Name="RunButton" Content="Run" IsDefault="True" Click="RunButton_Click" Margin="518.782,463,-519.733,-401.96" ToolTip="Run the algorithm"/>
+		<Button x:Name="ClearButton" Content="Clear" Click="ClearButton_Click" Margin="635.049,463,-636,-401.96" ToolTip="Clear the canvas"/>
+		<ComboBox Margin="18,487,-38,-408.96" ToolTip="Select the color of the new control point">
+			<ComboBoxItem x:Name="RedShapeItem" Content="Red" HorizontalAlignment="Left" Width="118" Selected="RedShapeItem_Selected"/>
+			<ComboBoxItem x:Name="BlueShapeItem" Content="Blue" HorizontalAlignment="Left" Width="118" Selected="BlueShapeItem_Selected"/>
+			<ComboBoxItem x:Name="GreenShapeItem" Content="Green" HorizontalAlignment="Left" Width="118" Selected="GreenShapeItem_Selected"/>
+			<ComboBoxItem x:Name="OrangeShapeItem" Content="Orange" HorizontalAlignment="Left" Width="118" Selected="OrangeShapeItem_Selected"/>
+			<ComboBoxItem x:Name="CyanShapeItem" Content="Cyan" HorizontalAlignment="Left" Width="118" Selected="CyanShapeItem_Selected"/>
 		</ComboBox>
-		<RadioButton x:Name="ShapeSizeTwo" Content="2" Margin="225,488,-159.87,-402.04" IsChecked="True" ToolTip="Selects the size of the shapes created by the new control point"/>
-		<RadioButton x:Name="ShapeSizeFour" Content="4" Margin="264.87,488,-201.74,-402.04" ToolTip="Selects the size of the shapes created by the new control point"/>
-		<RadioButton x:Name="ShapeSizeSix" Content="6" Margin="306.74,488,-246.61,-402.04" ToolTip="Selects the size of the shapes created by the new control point"/>
+		<RadioButton x:Name="ShapeSizeTwo" Content="2" Margin="364,488,-298.87,-402.04" IsChecked="True" ToolTip="Selects the size of the shapes created by the new control point"/>
+		<RadioButton x:Name="ShapeSizeFour" Content="4" Margin="403.87,488,-340.74,-402.04" ToolTip="Selects the size of the shapes created by the new control point"/>
+		<RadioButton x:Name="ShapeSizeSix" Content="6" Margin="445.74,488,-385.61,-402.04" ToolTip="Selects the size of the shapes created by the new control point"/>
 		<Menu HorizontalAlignment="Left" Height="23" Style="{DynamicResource SimpleMenu}" VerticalAlignment="Top" Width="100">
 			<MenuItem Header="Usage" Height="23" VerticalAlignment="Bottom" Click="Usage_Click"/>
 			<MenuItem Header="About" Height="23" VerticalAlignment="Top" Click="About_Click"/>
 		</Menu>
+		<Label Content="Shape Color (RGB)" HorizontalAlignment="Left" Height="25.96" Margin="159,437,-173,-362.96" VerticalAlignment="Top" Width="114"/>
+		<Slider x:Name="RedValueSlider" HorizontalAlignment="Left" Height="20" Margin="164,465,-164,-385" VerticalAlignment="Top" Width="100" Maximum="255" Value="255"/>
+		<Slider x:Name="GreenValueSlider" HorizontalAlignment="Left" Height="20" Margin="164,488,-164,-408" VerticalAlignment="Top" Width="100" Maximum="255" Value="255"/>
+		<Slider x:Name="BlueValueSlider" HorizontalAlignment="Left" Height="20" Margin="164,513,-164,-433" VerticalAlignment="Top" Width="100" Maximum="255" Value="255"/>
+		<Canvas x:Name="ColorPreviewCanvas" HorizontalAlignment="Left" Height="53.96" Margin="281,468,-232,-421.96" VerticalAlignment="Top" Width="51" Background="Black"/>
 	</Grid>
 </Window>

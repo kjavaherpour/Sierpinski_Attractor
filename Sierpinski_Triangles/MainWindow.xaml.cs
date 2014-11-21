@@ -58,26 +58,13 @@ namespace Sierpinski_Triangles
                 rect.Stroke = Brushes.Black;
 
                 //Get the selected ComboBox item for shape color (doesn't need to be an else if, only one of these can be selected anyway :^) )
-                if (ComboBox.GetIsSelected(RedShapeItem))
-                {
-                    rect.Fill = Brushes.Red;
-                }
-                if (ComboBox.GetIsSelected(GreenShapeItem))
-                {
-                    rect.Fill = Brushes.Green;
-                }
-                if (ComboBox.GetIsSelected(BlueShapeItem))
-                {
-                    rect.Fill = Brushes.Blue;
-                }
-                if (ComboBox.GetIsSelected(OrangeShapeItem))
-                {
-                    rect.Fill = Brushes.Orange;
-                }
-                if (ComboBox.GetIsSelected(CyanShapeItem))
-                {
-                    rect.Fill = Brushes.Cyan;
-                }
+				
+				//TODO: this is currently error-prone.
+                //int red = int.Parse(RedValue.GetValue());
+
+                
+				//rect.Fill = new SolidColorBrush(Color.FromRgb());
+				
                 //Get the position from the event firing it, relative to the canvas
                 Canvas.SetLeft(rect, e.GetPosition(ShapeCanvas).X);
                 Canvas.SetTop(rect, e.GetPosition(ShapeCanvas).Y);
@@ -189,8 +176,8 @@ namespace Sierpinski_Triangles
                     {
                         removed.Add(rekt);
                     }
-
                 }
+
                 foreach (Rectangle rekt in removed)
                 {
                     ShapeCanvas.Children.Remove(rekt);
@@ -214,6 +201,32 @@ namespace Sierpinski_Triangles
                 "\n\nYou must make at least three control points, but no more than six." +
                 " Shape size and color can be specified, per each control point, using the buttons at the bottom."
                 );
+        }
+		
+		//All of these will set the RGB triplet to some preset.
+        private void RedShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void BlueShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void GreenShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void OrangeShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void CyanShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
         }
 
     }
