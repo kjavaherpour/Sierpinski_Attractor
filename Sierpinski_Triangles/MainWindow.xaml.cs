@@ -65,13 +65,32 @@ namespace Sierpinski_Triangles
                     SolidColorBrush shapeColor = (SolidColorBrush)ColorPreviewCanvas.Background;
                     rect.Fill = shapeColor;
                 }
-                else rect.Fill = Brushes.White;				
+                else rect.Fill = Brushes.Black;				
 				
                 //Get the position from the event firing it, relative to the canvas
                 Canvas.SetLeft(rect, e.GetPosition(ShapeCanvas).X);
                 Canvas.SetTop(rect, e.GetPosition(ShapeCanvas).Y);
                 ShapeCanvas.Children.Add(rect); //put it on the canvas
                 cp[controlPoints] = rect; //add it to our list of controlpoints
+                
+                //if you added a shape after drawing the attractor already
+                if (drawn)
+                {
+                    List<Rectangle> removed = new List<Rectangle>();
+                    foreach (Rectangle rekt in ShapeCanvas.Children)
+                    {
+                        if (!cp.Contains(rekt))
+                        {
+                            removed.Add(rekt);
+                        }
+                    }
+
+                    foreach (Rectangle rekt in removed)
+                    {
+                        ShapeCanvas.Children.Remove(rekt);
+                    }
+                    drawAttractor();
+                }
             }
 
         }
@@ -201,7 +220,8 @@ namespace Sierpinski_Triangles
             MessageBox.Show(" \nPress Run to run the simulation, and Clear to clear the canvas of all shapes."+
                 " Right click to add a new control point. Hold left click and drag to move control points that are on the canvas." +
                 "\n\nYou must make at least three control points, but no more than six." +
-                " Shape size and color can be specified, per each control point, using the buttons at the bottom."
+                " Shape size and color can be specified, per each control point, using the " +
+                "controls at the bottom. There are presets as well as sliders that actuate those presets or the preference of the user."
                 );
         }
 		
@@ -230,7 +250,7 @@ namespace Sierpinski_Triangles
         private void OrangeShapeItem_Selected(object sender, System.Windows.RoutedEventArgs e)
         {
             RedValueSlider.Value = 255;
-            GreenValueSlider.Value = 255;
+            GreenValueSlider.Value = 165;
             BlueValueSlider.Value = 0;
         }
 

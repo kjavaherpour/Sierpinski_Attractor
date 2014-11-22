@@ -23,9 +23,9 @@
 			<MenuItem Header="About" Height="23" VerticalAlignment="Top" Click="About_Click"/>
 		</Menu>
 		<Label Content="Shape Color (RGB)" HorizontalAlignment="Left" Height="25.96" Margin="163.756,432.244,-177.756,-358.204" VerticalAlignment="Top" Width="114"/>
-		<Slider x:Name="RedValueSlider" HorizontalAlignment="Left" Height="20" Margin="168.756,460.244,-168.756,-380.244" VerticalAlignment="Top" Width="100" Maximum="255" Value="255" ValueChanged="ColorValueChanged"/>
-        <Slider x:Name="GreenValueSlider" HorizontalAlignment="Left" Height="20" Margin="168.756,483.244,-168.756,-403.244" VerticalAlignment="Top" Width="100" Maximum="255" Value="255" ValueChanged="ColorValueChanged"/>
-        <Slider x:Name="BlueValueSlider" HorizontalAlignment="Left" Height="20" Margin="168.756,508.244,-168.756,-428.244" VerticalAlignment="Top" Width="100" Maximum="255" Value="255" ValueChanged="ColorValueChanged"/>
-		<Canvas x:Name="ColorPreviewCanvas" HorizontalAlignment="Left" Height="53.96" Margin="285.756,463.244,-236.756,-417.204" VerticalAlignment="Top" Width="51" Background="White"/>
+		<Slider x:Name="RedValueSlider" HorizontalAlignment="Left" Height="20" Margin="168.756,460.244,-168.756,-380.244" VerticalAlignment="Top" Width="100" Maximum="255" ValueChanged="ColorValueChanged"/>
+        <Slider x:Name="GreenValueSlider" HorizontalAlignment="Left" Height="20" Margin="168.756,483.244,-168.756,-403.244" VerticalAlignment="Top" Width="100" Maximum="255" ValueChanged="ColorValueChanged"/>
+        <Slider x:Name="BlueValueSlider" HorizontalAlignment="Left" Height="20" Margin="168.756,508.244,-168.756,-428.244" VerticalAlignment="Top" Width="100" Maximum="255" ValueChanged="ColorValueChanged" Value="-1"/>
+		<Canvas x:Name="ColorPreviewCanvas" HorizontalAlignment="Left" Height="53.96" Margin="291.756,463.244,-242.756,-417.204" VerticalAlignment="Top" Width="51" Background="Black"/>
 	</Grid>
 </Window>
