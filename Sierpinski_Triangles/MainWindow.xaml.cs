@@ -38,28 +38,27 @@ namespace Sierpinski_Triangles
             {
                 Rectangle rect = new Rectangle();
                 rect.Name = "CP_" + controlPoints.ToString(); //Control Point # assignment, starts at 0
-                //first shape size
+
+                //New shape size
                 if(ShapeSizeTwo.IsChecked == true)
                 {
                     sizes[controlPoints] = 2;
                 }
-                //second shape size
                 else if(ShapeSizeFour.IsChecked == true)
                 {
                     sizes[controlPoints] = 4;
                 }
-                //third shape size
                 else if (ShapeSizeSix.IsChecked == true)
                 {
                     sizes[controlPoints] = 6;
                 }
+
+                //Control point size
                 rect.Height = 10;
                 rect.Width = 10;
                 rect.Stroke = Brushes.Black;
-
-                //Get the selected ComboBox item for shape color (doesn't need to be an else if, only one of these can be selected anyway :^) )
 				
-				//TODO: this is currently error-prone.
+                //Control point color
                 if (ColorPreviewCanvas != null)
                 {
                     SolidColorBrush shapeColor = (SolidColorBrush)ColorPreviewCanvas.Background;
