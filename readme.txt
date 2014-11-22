@@ -26,3 +26,16 @@ Orange	6px
 Making the shapes draggable was a matter of noting when the LeftMousedown was fired, and setting a boolean to true OnMouseDown, allowing the MouseMove method to work on the shape near (within a 20px radius) our mouse, and setting that same boolean to false when LeftMouseUp gets fired.
 
 All of the design was done in Blend and all of the programming was done in VS2013.
+
+
+# The functionality of the bottom bar #
+
+* Sliders are used to create a color for each control point. Three sliders are used which each modify a red, green or blue value of the control point color.
+* Preset Shape Colors is a list of colors that can be selected which will move the RGB sliders into known positions for a color. e.g., selecting "Red" will move the sliders to (255, 0, 0).
+* New Shape Size specifies the size of the newly created shapes when running the attractor.
+* Finally, Run and Clear are self-explanatory buttons.
+
+# Controls #
+
+* Right click to add a control-point. This can be done while the attractor is in a "drawn" state, which will create a new attractor and get rid of the old one, or outside of the "drawn" state, where it will simply add a new control point.
+* Left click and drag to move a control point. Similarly, this will behave differently if the attractor has been drawn yet or not.
